@@ -5253,6 +5253,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C2" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0603-16V-10%" value="1.0uF"/>
 <part name="H1" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
 <part name="H2" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
+<part name="R3" library="rcl" deviceset="R-US_" device="R0805" value="10K"/>
 </parts>
 <sheets>
 <sheet>
@@ -5273,6 +5274,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="C2" gate="G$1" x="27.94" y="60.96"/>
 <instance part="H1" gate="G$1" x="10.16" y="91.44"/>
 <instance part="H2" gate="G$1" x="20.32" y="91.44"/>
+<instance part="R3" gate="G$1" x="40.64" y="76.2" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5418,22 +5420,29 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="7.62" y1="68.58" x2="27.94" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="109.22" x2="35.56" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="VCC"/>
-<wire x1="35.56" y1="88.9" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="88.9" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="76.2" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="68.58" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
 <junction x="35.56" y="68.58"/>
 <junction x="40.64" y="68.58"/>
 <pinref part="PROGRAMMER" gate="A" pin="2"/>
 <wire x1="53.34" y1="88.9" x2="35.56" y2="88.9" width="0.1524" layer="91"/>
 <junction x="35.56" y="88.9"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<junction x="35.56" y="76.2"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
 <pinref part="PROGRAMMER" gate="A" pin="5"/>
 <wire x1="60.96" y1="83.82" x2="78.74" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="83.82" x2="78.74" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="83.82" x2="78.74" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="PB5"/>
+<wire x1="78.74" y1="76.2" x2="78.74" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="55.88" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="76.2" x2="78.74" y2="76.2" width="0.1524" layer="91"/>
+<junction x="78.74" y="76.2"/>
 </segment>
 </net>
 </nets>
